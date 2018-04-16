@@ -4,10 +4,12 @@ import Square from './square';
 
 class Board extends React.Component {
 
-  renderSquare(i) {
-    return (
-      <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)}/>
-    );
+  renderSquare() {
+    let squares = [];
+    for(let i=0; i<9; i++) {
+      squares.push(<Square key={i} value={this.props.squares[i]} onClick={() => this.props.onClick(i)}/>);
+    }
+    return squares;
   }
 
   handleClick() {
@@ -19,22 +21,10 @@ class Board extends React.Component {
       <div>
         <h4>Wanna Play a Game?</h4>
         <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
+          {this.renderSquare()}
         </div>
         <br/>
-        <Button onClick={() => this.handleClick()} content={"Reset"}/>
+        <Button onClick={() => this.handleClick()} content={"Start Over"}/>
       </div>
     );
   }

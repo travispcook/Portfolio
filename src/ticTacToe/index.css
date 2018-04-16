@@ -7,6 +7,10 @@ ol, ul {
   padding-left: 30px;
 }
 
+.board-row {
+  width: 147px;
+}
+
 .board-row:after {
   clear: both;
   content: "";
@@ -38,13 +42,4 @@ ol, ul {
 
 .kbd-navigation .square:focus {
   background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
 }

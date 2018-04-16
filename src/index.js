@@ -2,7 +2,6 @@ import Game from './ticTacToe/index';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Styled from './index.style';
-import Title from './title/index';
 
 class Main extends React.Component {
   render() {
