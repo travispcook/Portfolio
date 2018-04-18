@@ -3,20 +3,19 @@ import Proptypes from 'prop-types';
 import Styled from './button.style'
 
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return(
-      <Styled primary onClick={() => this.props.onClick()}>{this.props.content}</Styled>
+      <Styled primary disabled={this.props.disabled} style={this.props.style} onClick={() => this.props.onClick()} type={this.props.type}>{this.props.content}</Styled>
     );
   }
 }
 
 Button.Proptypes = {
   content: Proptypes.string,
+  disabled: Proptypes.bool,
   onClick: Proptypes.func,
+  style: Proptypes.string,
+  type: Proptypes.string
 }
 
 Button.defaultProps = {
