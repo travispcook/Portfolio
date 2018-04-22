@@ -4,10 +4,15 @@
   "private": true,
   "dependencies": {
     "lodash": "^4.17.5",
+    "node-sass-chokidar": "^1.2.2",
+    "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-flexbox-grid": "^2.0.0",
-    "react-scripts": "1.1.4"
+    "react-icons": "^2.2.7",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.2.5"
   },
   "scripts": {
     "start": "react-scripts start",
