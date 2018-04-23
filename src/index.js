@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Styled from './index.style';
 import Title from './widgets/title/index';
 import TodoApp from './widgets/todo/index';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Main extends React.Component {
   render() {
@@ -11,7 +12,13 @@ class Main extends React.Component {
       <Styled>
         <Title />
         <Game />
-        <TodoApp />
+        <Grid fluid>
+          <Row center="xs" middle="xs">
+            <Col xs>
+              <TodoApp />
+            </Col>
+          </Row>
+        </Grid>
       </Styled>
     );
   }

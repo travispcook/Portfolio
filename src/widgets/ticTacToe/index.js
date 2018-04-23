@@ -2,6 +2,7 @@ import Board from './board';
 import React from 'react';
 import Styled from './index.style';
 import './index.css';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Game extends React.Component {
   constructor(props) {
@@ -94,13 +95,21 @@ class Game extends React.Component {
 
     return (
       <Styled className="game">
-        <div className="game-board">
-          <Board squares={current.squares} onClick={(i) => this.handleClick(i)} clickReset={() => this.handleReset()}/>
-        </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
-        </div>
+        <Grid fluid>
+          <Row center="xs" middle="xs">
+            <Col xs={6}>
+              <div className="game-board">
+                <Board squares={current.squares} onClick={(i) => this.handleClick(i)} clickReset={() => this.handleReset()}/>
+              </div>
+            </Col>
+            <Col xs={6}>
+              <div className="game-info">
+                <div>{status}</div>
+                <ol>{moves}</ol>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
       </Styled>
     );
   }
