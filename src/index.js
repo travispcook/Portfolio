@@ -1,20 +1,24 @@
-import Game from './ticTacToe/index';
+import Game from './widgets/ticTacToe/index';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Styled from './index.style';
-import TodoApp from './todo/index';
+import Title from './widgets/title/index';
+import TodoApp from './widgets/todo/index';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Main extends React.Component {
   render() {
     return(
       <Styled>
-        <div className="main-title">
-          <h1>Travis Cook</h1>
-          <h4>Pretty Decent Coder</h4>
-          <h4>See the code hosted at <a href="https://github.com/travispcook/Portfolio">GitHub</a></h4>
-        </div>
+        <Title />
         <Game />
-        <TodoApp/>
+        <Grid fluid>
+          <Row center="xs" middle="xs">
+            <Col xs md={6}>
+              <TodoApp />
+            </Col>
+          </Row>
+        </Grid>
       </Styled>
     );
   }
