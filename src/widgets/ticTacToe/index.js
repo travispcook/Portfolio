@@ -95,6 +95,7 @@ class Game extends React.Component {
 
     return (
       <Styled className="game">
+        <h1>Tic Tac Toe</h1>
         <Grid fluid>
           <Row center="xs" middle="xs">
             <Col xs={6}>

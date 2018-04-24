@@ -1,15 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import React from 'react';
+import Styled from './todo.style';
+import { FaSquareO, FaCheckSquare } from 'react-icons/lib/fa';
 
 const Todo = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-    style={ {
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
-    {text}
-  </li>
+  <Styled onClick={onClick} style={{textDecoration: completed ? 'line-through' : 'none'}}>
+    {completed ? <FaCheckSquare /> : <FaSquareO />}
+    <span className="todo">{text}</span>
+  </Styled>
 )
 
 Todo.propTypes = {

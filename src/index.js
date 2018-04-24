@@ -14,7 +14,7 @@ class Main extends React.Component {
         <Game />
         <Grid fluid>
           <Row center="xs" middle="xs">
-            <Col xs>
+            <Col xs md={6}>
               <TodoApp />
             </Col>
           </Row>
