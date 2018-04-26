@@ -1,5 +1,5 @@
-import Button from '../../../components/button/index';
-import Input from '../../../components/input/index';
+import Button from '../components/button/index';
+import Input from '../components/input/index';
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions';

@@ -8,7 +8,7 @@ const Todo = ({ onClick, completed, text }) => (
     {completed ? <FaCheckSquare /> : <FaSquareO />}
     <span className="todo">{text}</span>
   </Styled>
-)
+);
 
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,
@@ -16,4 +16,4 @@ Todo.propTypes = {
   text: PropTypes.string.isRequired
 }
 
-export default Todo
+export default Todo;
