@@ -1,8 +1,8 @@
-import AddTodo from '../containers/addTodo';
+import AddTodo from '../../containers/addTodo';
 import Footer from './footer';
 import React from 'react';
 import Styled from './app.style';
-import VisibleTodoList from '../containers/visibleTodoList';
+import VisibleTodoList from '../../containers/visibleTodoList';
 
 const App = () => (
   <Styled>

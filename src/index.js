@@ -1,6 +1,7 @@
 import Game from './widgets/ticTacToe/index';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import StarWars from './widgets/starWars/index';
 import Styled from './index.style';
 import Title from './widgets/title/index';
 import TodoApp from './widgets/todo/index';
@@ -14,8 +15,13 @@ class Main extends React.Component {
         <Game />
         <Grid fluid>
           <Row center="xs" middle="xs">
-            <Col xs md={6}>
+            <Col xs>
               <TodoApp />
+            </Col>
+          </Row>
+          <Row center="xs" middle="xs">
+            <Col xs>
+              <StarWars />
             </Col>
           </Row>
         </Grid>
