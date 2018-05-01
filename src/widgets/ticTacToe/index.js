@@ -1,7 +1,6 @@
 import Board from './board';
 import React from 'react';
 import Styled from './index.style';
-import './index.css';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Game extends React.Component {

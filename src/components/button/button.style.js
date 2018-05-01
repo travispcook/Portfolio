@@ -7,9 +7,13 @@ export default styled.button`
   line-height: 16px;
   font-size: 16px;
   color: #646464;
+  cursor: pointer;
 
   ${props => props.primary && css`
     background: #93C83E;
     color: white;
+    &:disabled {
+      opacity: 0.7;
+    }
   `}
 `;
