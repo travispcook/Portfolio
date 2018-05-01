@@ -16,7 +16,7 @@ class Card extends React.Component {
     if(this.props.imgSrc === undefined) { return null; }
 
     return(
-      <img src={this.props.imgSrc}/>
+      <img alt="card img" src={this.props.imgSrc}/>
     );
   }
 
